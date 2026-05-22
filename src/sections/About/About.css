@@ -1,0 +1,53 @@
+.about__inner {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about__heading h2 {
+  margin-bottom: 0;
+}
+
+.about__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.about__quote {
+  margin: 1.5rem 0 0;
+  padding: 1.6rem 1.8rem;
+  border-left: 2px solid var(--gold);
+  background: linear-gradient(180deg, rgba(201, 169, 97, 0.05), transparent);
+}
+
+.about__quote blockquote {
+  margin: 0 0 0.6rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 1.7vw, 1.45rem);
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--parchment);
+}
+
+.about__quote figcaption {
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+@media (max-width: 900px) {
+  .about__inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about__quote {
+    padding: 1.2rem 1.2rem;
+  }
+}

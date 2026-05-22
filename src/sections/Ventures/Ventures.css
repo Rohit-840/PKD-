@@ -1,0 +1,101 @@
+.ventures {
+  background: linear-gradient(180deg, var(--ink-900), var(--ink-800));
+}
+
+.ventures__header {
+  max-width: 700px;
+  margin-bottom: 3.5rem;
+}
+
+.ventures__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.venture {
+  position: relative;
+  padding: 2.5rem;
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(ellipse at top right, rgba(201, 169, 97, 0.07), transparent 60%),
+    linear-gradient(180deg, var(--ink-700), var(--ink-800));
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  transition: border-color 0.35s var(--ease), transform 0.35s var(--ease);
+}
+
+.venture:hover {
+  border-color: var(--gold);
+  transform: translateY(-3px);
+}
+
+.venture__top {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.venture__top h3 {
+  font-size: clamp(1.6rem, 2.4vw, 2rem);
+  margin: 0;
+}
+
+.venture__role {
+  font-size: 0.78rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.venture > p {
+  margin: 0;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.venture__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  align-self: flex-start;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--parchment);
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--line);
+  transition: color 0.25s var(--ease), border-color 0.25s var(--ease),
+    gap 0.25s var(--ease);
+}
+
+.venture__link svg {
+  font-size: 1.1rem;
+  transition: transform 0.25s var(--ease);
+}
+
+.venture__link:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+.venture__link:hover svg {
+  transform: translate(2px, -2px);
+}
+
+@media (max-width: 840px) {
+  .ventures__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .venture {
+    padding: 2rem 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .venture {
+    padding: 1.6rem 1.2rem;
+  }
+}
