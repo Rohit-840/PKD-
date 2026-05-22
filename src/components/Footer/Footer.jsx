@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="container footer__inner">
         <div className="footer__brand">
           <span className="footer__monogram">PKD</span>
-          <div>
+          <div className="footer__brand-text">
             <strong>{profile.name}</strong>
             <span>{profile.title}</span>
           </div>
